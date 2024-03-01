@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    color: white;
+    font-size: 1, 5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #ffbb00;
+    margin-top: -32px;
+    height: 80px;
+}
+
+.logo {
+    font-size: xx-large;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.nav-bar {
+    float: right;
+    padding-right: 20px;
+}
+
+.nav-button {
+    height: 80px;
+    width: 80px;
+    border: none;
+    background-color: #ffbb00;
+    color: white;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: 0.5s;
+}
+
+.nav-button:hover {
+    text-underline-offset: 5px;
+    transition: 0.5s;
+}
+
+.article-img {
+    width: 200px;
+}
+
+article {
+    margin: 20px 10px;
+    width: 300px;
+    background-color: #363636;
+    text-align: center;
+    padding-bottom: 8px;
+    padding-top: 1px;
+    border-radius: 10px;
+}
+
+.fast-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-series {
+    background-image: url(../img/tadc-bannier.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    height: 80vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main-series-logo {
+    width: 350px;
+    height: 200px;
+    position: relative;
+    left: 5%;
+    bottom: 25%;
+    text-align: center;
+}
+
+.main-series-author {
+    font-weight: bolder;
+}
+
+.play-button {
+    height: 50px;
+    width: 150px;
+    font-weight: bolder;
+    transition: 0.5s;
+    box-shadow: none;
+    border: none;
+    border-radius: 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
