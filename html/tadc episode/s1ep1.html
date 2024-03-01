@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/normalize.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="../../assets/css/normalize.css" rel="stylesheet">
+    <link href="s1ep1.css" rel="stylesheet">
     <title>Indé-Stream</title>
 </head>
 
@@ -14,7 +14,7 @@
     <header>
         <div class="nav-bar">
             <button class="home nav-button">
-                home
+                <a class="home nav-button" href="../../index.html">home</a>
             </button>
             <button class="series nav-button">
                 series
@@ -29,23 +29,18 @@
 
     <main>
 
-        <div class="main-series">
-            <div  class="main-series-logo">
-                
-             <img src="assets/img/tadc/Amazing_Digital_Circus_logo.png" alt="logo" class="main-series-logo-img">
+        <h1>The Amazing Digital Circus</h1>
+        <h2>Season 1 - Episode 1</h2>
 
-             <p class="main-series-author">GooseWorx - Glitch Production</p>
+        <video controls>
+            <source src="../../assets/video/series/tadc/s1/THE AMAZING DIGITAL CIRCUS EPISODE 1.mp4" type="video/mp4" />
+            <source src="../../assets/video/series/tadc/s1/THE AMAZING DIGITAL CIRCUS EPISODE 1.mp4" type="video/webm" />
+            <p>
+              Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
+              <a href="../../assets/video/series/tadc/s1/THE AMAZING DIGITAL CIRCUS EPISODE 1.mp4">un lien pour télécharger la vidéo</a>.
+            </p>
+          </video>
 
-             <a href="html/tadc episode/s1ep1.html"><button class="play-button">Play <i class="fa-solid fa-play"></i></button></a>
-
-             <a href="html/tadc.html"><button class="play-button">En savoir plus <i class="fa-solid fa-bars"></i></button></a>
-
-            </div>
-        </div>
-
-        <div class="fast-list">
-
-        </div>
     </main>
 
     <footer>
@@ -65,7 +60,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/c51329b043.js" crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/tadc.js"></script>
 </body>
 
 </html>
