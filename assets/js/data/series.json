@@ -3,49 +3,56 @@
         "id": "1",
         "title": "The Amazing Digital Circus",
         "img": "assets/img/tadc/tadc-fast-img.jpg",
-        "author": "Gooseworx - Glitch Production"
+        "author": "Gooseworx - Glitch Production",
+        "link": "html/tadc.html"
     },
     {
         "id": "2",
         "title": "Murder Drones",
         "img": "assets/img/md/murder-drone-fast-series.jpg",
-        "author": "Liam Vickers - Glitch Production"
+        "author": "Liam Vickers - Glitch Production",
+        "link": "html/md.html"
     },
     {
         "id": "3",
         "title": "Hazbin Hotel",
         "img": "assets/img/hh/hazbin-hotel-fast-series-img.jpg",
-        "author": "Vivienne Medrano - Production A24 - Bento Box Entertainment - Amazon MGM Studios"
+        "author": "Vivienne Medrano",
+        "link": ""
     },
     {
         "id": "4",
         "title": "Helluva Boss",
         "img": "assets/img/hb/heluva-boss-fast-series-img.jpg",
-        "author": "Vivienne Medrano"
+        "author": "Vivienne Medrano",
+        "link": ""
     },
     {
         "id": "5",
         "title": "Meta Runner",
         "img": "assets/img/mr/mr-fast-series-img.jpg",
-        "author": "Glitch Production"
+        "author": "Glitch Production",
+        "link": ""
     },
     {
         "id": "6",
         "title": "Sunset Paradise",
         "img": "assets/img/sp/sp-fast-series-img.jpg",
-        "author": "Glitch Production"
+        "author": "Glitch Production",
+        "link": ""
     },
     {
         "id": "7",
         "title": "Lackadaisy",
         "img": "assets/img/ld/ld-fast-series-img.jpg",
-        "author": "Tracy J. Butler"
+        "author": "Tracy J. Butler",
+        "link": ""
     },
     {
         "id": "8",
         "title": "Spooky Month",
         "img": "assets/img/sm/sm-fast-serie-img.jpg",
-        "author": "Sr Pelo"
+        "author": "Sr Pelo",
+        "link": ""
     }
- 
 ]

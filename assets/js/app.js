@@ -2,7 +2,7 @@ const fastlist = document.querySelector(".fast-list");
 
 async function fetchSeriesData() {
     try {
-        const response = await fetch('assets/js/data/series.json'); // Assurez-vous que le chemin est correct
+        const response = await fetch('assets/js/data/series.json');
         const series = await response.json();
         return series;
     } catch (error) {
@@ -21,14 +21,19 @@ async function parcourirSeries() {
             const titre = document.createElement("h2");
             const img = document.createElement("img");
             const author = document.createElement("p");
+            const link = document.createElement("a");
 
             img.classList.add("article-img");
+            link.classList.add("link");
+            author.classList.add("author");
 
-            fastlist.appendChild(article);
+            fastlist.appendChild(link);
+            link.appendChild(article)
             article.appendChild(titre);
             article.appendChild(img);
             article.appendChild(author);
 
+            link.href = currentSerie.link
             titre.textContent = currentSerie.title;
             img.src = currentSerie.img;
             author.textContent = "By: " + currentSerie.author;
@@ -41,12 +46,11 @@ async function parcourirSeries() {
 parcourirSeries();
 
 const form = document.querySelector('.add-series-form');
-const seriesData = []; // Remplacez par vos données JSON existantes
+const seriesData = [];
 
-// Fonction pour ajouter une nouvelle série
 function addSeries(title, img, author) {
     const newSeries = {
-        id: (seriesData.length + 1).toString(), // Générez un nouvel ID en fonction de la longueur actuelle du tableau
+        id: (seriesData.length + 1).toString(),
         title: title,
         img: img,
         author: author
@@ -54,21 +58,18 @@ function addSeries(title, img, author) {
     seriesData.push(newSeries);
 }
 
-// Écouteur d'événement pour la soumission du formulaire
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche la soumission par défaut du formulaire
 
-    // Récupérer les valeurs des champs du formulaire
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
     const title = document.getElementById('title').value;
-    const img = document.getElementById('img').value; // Vous pouvez obtenir la valeur de l'élément de type file de cette manière
+    const img = document.getElementById('img').value;
     const author = document.getElementById('Author').value;
 
-    // Ajouter une nouvelle série avec les données saisies dans le formulaire
+
     addSeries(title, img, author);
 
-    // Afficher les données mises à jour
     console.log(seriesData);
 
-    // Réinitialiser le formulaire
     form.reset();
 });
