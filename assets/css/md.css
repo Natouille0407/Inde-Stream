@@ -62,7 +62,7 @@ footer {
     height: 200px;
     position: relative;
     left: 5%;
-    bottom: 20%;
+    bottom: 0%;
     text-align: center;
 }
 
@@ -89,4 +89,8 @@ article {
 a {
     text-decoration: none;
     color: white;
+}
+
+.main-series-logo-img {
+    width: 550px;
 }
