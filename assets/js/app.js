@@ -1,85 +1,74 @@
-const series = [
-
-    {
-        id: "1",
-        title: "The Amazing Digital Circus",
-        img : "assets/img/tadc/tadc-fast-img.jpg",
-        author: "Gooseworx - Glitch Production",
-    },
-
-    {
-        id: "2",
-        title: "Murder Drones",
-        img: "assets/img/md/murder-drone-fast-series.jpg",
-        author: "Liam Vickers - Glitch Production",
-    },
-
-    {
-        id: "3",
-        title: "Hazbin Hotel",
-        img: "assets/img/hh/hazbin-hotel-fast-series-img.jpg",
-        author: "Vivienne Medrano - Production A24 - Bento Box Entertainment - Amazon MGM Studios",
-    },
-
-    {
-        id: "4",
-        title: "Helluva Boss",
-        img: "assets/img/hb/heluva-boss-fast-series-img.jpg",
-        author: "Vivienne Medrano",
-    },
-
-    {
-        id: "5",
-        title: "Meta Runner",
-        img: "assets/img/mr/mr-fast-series-img.jpg",
-        author: "Glitch Production",
-    },
-
-    {
-        id: "6",
-        title: "Sunset Paradise",
-        img: "assets/img/sp/sp-fast-series-img.jpg",
-        author: "Glitch Production",
-    },
-
-    {
-        id: "7",
-        title: "Lackadaisy",
-        img: "assets/img/ld/ld-fast-series-img.jpg",
-        author: "Tracy J. Butler",
-    },
-
-    {
-        id: "8",
-        title: "Spooky Month",
-        img: "assets/img/sm/sm-fast-serie-img.jpg",
-        author: "Sr Pelo",
-    },
-
-]
-
 const fastlist = document.querySelector(".fast-list");
 
-function parcourirSeries(series) {
-    for (let i = 0; i < series.length; i++) {
-        const currentSerie = series[i];
-
-        const article = document.createElement("article");
-        const titre = document.createElement("h2");
-        const img = document.createElement("img");
-        const author = document.createElement("p");
-
-        img.classList.add("article-img");
-
-        fastlist.appendChild(article);
-        article.appendChild(titre);
-        article.appendChild(img);
-        article.appendChild(author);
-
-        titre.textContent = currentSerie.title;
-        img.src = currentSerie.img;
-        author.textContent = "By: " + currentSerie.author;
+async function fetchSeriesData() {
+    try {
+        const response = await fetch('assets/js/data/series.json'); // Assurez-vous que le chemin est correct
+        const series = await response.json();
+        return series;
+    } catch (error) {
+        console.error('Erreur lors de la récupération des données de la série:', error);
+        return null;
     }
 }
 
-parcourirSeries(series);
+async function parcourirSeries() {
+    const series = await fetchSeriesData();
+    if (series) {
+        for (let i = 0; i < series.length; i++) {
+            const currentSerie = series[i];
+
+            const article = document.createElement("article");
+            const titre = document.createElement("h2");
+            const img = document.createElement("img");
+            const author = document.createElement("p");
+
+            img.classList.add("article-img");
+
+            fastlist.appendChild(article);
+            article.appendChild(titre);
+            article.appendChild(img);
+            article.appendChild(author);
+
+            titre.textContent = currentSerie.title;
+            img.src = currentSerie.img;
+            author.textContent = "By: " + currentSerie.author;
+        }
+    } else {
+        console.log('Impossible de récupérer les données de la série.');
+    }
+}
+
+parcourirSeries();
+
+const form = document.querySelector('.add-series-form');
+const seriesData = []; // Remplacez par vos données JSON existantes
+
+// Fonction pour ajouter une nouvelle série
+function addSeries(title, img, author) {
+    const newSeries = {
+        id: (seriesData.length + 1).toString(), // Générez un nouvel ID en fonction de la longueur actuelle du tableau
+        title: title,
+        img: img,
+        author: author
+    };
+    seriesData.push(newSeries);
+}
+
+// Écouteur d'événement pour la soumission du formulaire
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+    // Récupérer les valeurs des champs du formulaire
+    const title = document.getElementById('title').value;
+    const img = document.getElementById('img').value; // Vous pouvez obtenir la valeur de l'élément de type file de cette manière
+    const author = document.getElementById('Author').value;
+
+    // Ajouter une nouvelle série avec les données saisies dans le formulaire
+    addSeries(title, img, author);
+
+    // Afficher les données mises à jour
+    console.log(seriesData);
+
+    // Réinitialiser le formulaire
+    form.reset();
+});

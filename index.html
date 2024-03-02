@@ -30,15 +30,17 @@
     <main>
 
         <div class="main-series">
-            <div  class="main-series-logo">
-                
-             <img src="assets/img/tadc/Amazing_Digital_Circus_logo.png" alt="logo" class="main-series-logo-img">
+            <div class="main-series-logo">
 
-             <p class="main-series-author">GooseWorx - Glitch Production</p>
+                <img src="assets/img/tadc/Amazing_Digital_Circus_logo.png" alt="logo" class="main-series-logo-img">
 
-             <a href="html/tadc episode/s1ep1.html"><button class="play-button">Play <i class="fa-solid fa-play"></i></button></a>
+                <p class="main-series-author">GooseWorx - Glitch Production</p>
 
-             <a href="html/tadc.html"><button class="play-button">En savoir plus <i class="fa-solid fa-bars"></i></button></a>
+                <a href="html/tadc episode/s1ep1.html"><button class="play-button">Play <i
+                            class="fa-solid fa-play"></i></button></a>
+
+                <a href="html/tadc.html"><button class="play-button">En savoir plus <i
+                            class="fa-solid fa-bars"></i></button></a>
 
             </div>
         </div>
@@ -46,6 +48,28 @@
         <div class="fast-list">
 
         </div>
+
+        <form class="add-series-form">
+            <h2>Add a series :</h2>
+
+            <label>Title :</label>
+            <input name="title" id="title" type="text" required>
+
+            <br>
+
+            <label>Image :</label>
+            <input name="image" id="img" type="file" accept=".jpg, .jpeg, .png, .svg" required>
+
+            <br>
+
+            <label>Author :</label>
+            <input name="Author" id="Author" type="text" required>
+
+            <br>
+
+            <input type="submit" value="Ajouter" id="submit">
+
+        </form>
     </main>
 
     <footer>
