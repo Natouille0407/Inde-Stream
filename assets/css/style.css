@@ -61,11 +61,19 @@ article {
     height:440px;
 }
 
+h2 {
+    display: flex;
+    justify-content: center;
+    text-wrap: nowrap;
+    font-size: 1.3em;
+}
+
 .fast-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 5px 5px;
 }
 
 .main-series {
@@ -85,7 +93,7 @@ article {
     height: 200px;
     position: relative;
     left: 5%;
-    bottom: 30%;
+    bottom: 35%;
     text-align: center;
 }
 

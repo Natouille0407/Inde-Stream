@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../assets/css/normalize.css" rel="stylesheet">
-    <link href="s1ep1.css" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/player.css" rel="stylesheet">
     <title>Indé-Stream</title>
 </head>
 
@@ -14,7 +15,7 @@
     <header>
         <div class="nav-bar">
             <button class="home nav-button">
-                <a class="home nav-button" href="../../index.html">home</a>
+                home
             </button>
             <button class="series nav-button">
                 series
@@ -29,18 +30,14 @@
 
     <main>
 
-        <h1>Murder Drones</h1>
-        <h2>Season 1 - Episode 1</h2>
+        <div class="video-player">
+            <iframe width="740" height="460" frameborder="0" src="" allowfullscreen allow="autoplay;">
+            </iframe>
+        </div>
 
-        <video controls autoplay>
-            <source src="https://github.com/Natouille0407/Inde-Stream/raw/main/assets/video/series/md/MURDER%20DRONES%20-%20Episode%201%EF%BC%9A%20PILOT.mp4" type="video/mp4" />
-            <source src="https://github.com/Natouille0407/Inde-Stream/raw/main/assets/video/series/md/MURDER%20DRONES%20-%20Episode%201%EF%BC%9A%20PILOT.mp4" type="video/webm" />
-            <p>
-              Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
-              <a href="https://github.com/Natouille0407/Inde-Stream/raw/main/assets/video/series/md/MURDER%20DRONES%20-%20Episode%201%EF%BC%9A%20PILOT.mp4">un lien pour télécharger la vidéo</a>.
-            </p>
-          </video>
+        <div class="episode-list">
 
+        </div>
     </main>
 
     <footer>
@@ -60,7 +57,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/c51329b043.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/md.js"></script>
+    <script src="assets/js/player.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,26 @@
+.video-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+iframe {
+    margin: 25px;
+}
+
+.episode-list {
+    background-color: #363636;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.episode {
+    background-color: #ffbb00;
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
